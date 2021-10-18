@@ -23,21 +23,25 @@ var img1 = document.getElementById("projImgStack1");
 var img2 = document.getElementById("projImgStack2");
 var img3 = document.getElementById("projImgStack3");
 var img4 = document.getElementById("projImgStack4");
-var modalImg = document.getElementById("img01");
+var modalImg1 = document.getElementById("img01");
 // var modalImg2 = document.getElementById("img02");
 // var modalImg3 = document.getElementById("img03");
-var captionText1 = document.getElementById("caption1");
-var captionText2 = document.getElementById("caption2");
-var captionText3 = document.getElementById("caption3");
+var captionText = document.getElementById("caption1");
+// var captionText1 = document.getElementById("caption1");
+// var captionText2 = document.getElementById("caption2");
+// var captionText3 = document.getElementById("caption3");
 var blockMain = document.getElementById("main");
 var blockBanner = document.getElementById("banner");
+var blockButton = document.getElementById("button");
 var setPosition = blockMain, blockBanner;
 var setIndex = blockMain, blockBanner;
 
 function imgDisplay() {
   modal.style.display = "block";
+  captionText.style.display = "block";
   setPosition.style.position = "relative";
   setIndex.style.zIndex = -3;
+  blockButton.style.visibility = "hidden";
   return true;
 }
 
@@ -49,29 +53,28 @@ for(var i = 0 ; i <= imgsArr.length-1; i++ ) {
   switch(imgsArr[0]) {
     case img1:
       img1.onclick = function(){
-        modalImg.src = this.src;
-        // captionText1.innerHTML = this.alt;
+        modalImg1.src = this.src;
         imgDisplay();
       }
     break;
     case img2:
       img2.onclick = function(){
-        modalImg.src = this.src;
-        captionText2.innerHTML = this.alt;
+        modalImg1.src = this.src;
+        // captionText.innerHTML = this.alt;
         imgDisplay();
       }
     break;
     case img3:
       img3.onclick = function(){
-        modalImg.src = this.src;
-        captionText2.innerHTML = this.alt;
+        modalImg1.src = this.src;
+        // captionText.innerHTML = this.alt;
         imgDisplay();
       }
     break;
     case img4:
       img4.onclick = function(){
-        modalImg.src = this.src;
-        captionText2.innerHTML = this.alt;
+        modalImg1.src = this.src;
+        // captionText.innerHTML = this.alt;
         imgDisplay();
       }
     break;
@@ -85,6 +88,8 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
   setPosition.style.position = "initial";
+  // $("body").document.getElementsByTagName.style.over
   setIndex.style.zIndex = 0;
-
+  blockButton.style.visibility = "visible";
+  
 }

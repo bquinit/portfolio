@@ -4060,7 +4060,8 @@ input, select, textarea {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+	z-index: 4; /* Edited */
+	padding-top: calc(20% - 175px); /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -4072,26 +4073,27 @@ input, select, textarea {
 
 /* Modal Content (image) */
 .modal-content {
-  margin: auto;
+  margin: 0 auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+	width: calc(100% - 340px);
 }
 
 /* Caption of Modal Image */
-#caption1, #caption2 {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+.caption {
+  display: none;
   text-align: center;
-  color: #ccc;
   padding: 10px 0;
-  height: 200px;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-weight: 800;
+	background: #242943;
+	width: calc(100% - 340px);
+  margin-left: 160px;
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content, .caption {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -4110,9 +4112,10 @@ input, select, textarea {
 
 /* The Close Button */
 .close {
-  position: absolute;
+  position: relative;
   /* top: 15px; */
-  right: 270px;
+  right: calc(100% - 97%);
+	float: right;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
@@ -4287,8 +4290,13 @@ input, select, textarea {
     padding-left: 2px;
 	}
 	.close {
-    top: 7%;
-    right: 50%;
+    /* top: 7%; */
+    right: 0;
+		float: none;
+	}
+	.modal {
+    padding-top: calc(30% - 50px);
+		text-align: center;
 	}
 	.proImg {
     width: 90%;
@@ -4305,8 +4313,9 @@ input, select, textarea {
     padding: 0;
 		margin: 0;
 	}
-	#caption1, #caption2 {
-    height: 240px;
+	.caption {
+		width: 100%;
+    margin-left: 0px;
 	}
 	ul.icons {
 		columns: 1;
@@ -4340,7 +4349,7 @@ input, select, textarea {
 	#button {
     bottom: 60px;
 	}
-
+	
 }
 
 
