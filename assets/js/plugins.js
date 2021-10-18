@@ -50,7 +50,7 @@ for(var i = 0 ; i <= imgsArr.length-1; i++ ) {
     case img1:
       img1.onclick = function(){
         modalImg.src = this.src;
-        captionText1.innerHTML = this.alt;
+        // captionText1.innerHTML = this.alt;
         imgDisplay();
       }
     break;
