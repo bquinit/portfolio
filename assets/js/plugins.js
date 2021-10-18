@@ -22,6 +22,7 @@ var modal = document.getElementById("myModal");
 var img1 = document.getElementById("projImgStack1");
 var img2 = document.getElementById("projImgStack2");
 var img3 = document.getElementById("projImgStack3");
+var img4 = document.getElementById("projImgStack4");
 var modalImg = document.getElementById("img01");
 // var modalImg2 = document.getElementById("img02");
 // var modalImg3 = document.getElementById("img03");
@@ -40,7 +41,7 @@ function imgDisplay() {
   return true;
 }
 
-var imgsArr = [img1, img2, img3];
+var imgsArr = [img1, img2, img3, img4];
 
 for(var i = 0 ; i <= imgsArr.length-1; i++ ) {
   imgsArr[0] = imgsArr[i];
@@ -62,6 +63,13 @@ for(var i = 0 ; i <= imgsArr.length-1; i++ ) {
     break;
     case img3:
       img3.onclick = function(){
+        modalImg.src = this.src;
+        captionText2.innerHTML = this.alt;
+        imgDisplay();
+      }
+    break;
+    case img4:
+      img4.onclick = function(){
         modalImg.src = this.src;
         captionText2.innerHTML = this.alt;
         imgDisplay();

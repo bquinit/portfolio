@@ -2341,6 +2341,9 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		position: relative;
+		bottom: -105px;
+    margin: 0;
 	}
 
 		ul.icons li {
@@ -4020,7 +4023,7 @@ input, select, textarea {
 }
 .projTitle span {
  font-size: 17px;
- padding-left: 10px;
+ padding-left: 2px;
 }
 .projTitle span:hover{
 	color: #2a2f4a;
@@ -4151,11 +4154,11 @@ input, select, textarea {
 		
 #button {
 	display: inline-block;
-	background-color: #4d8497;
+	background-color: #fff;
 	width: 50px;
 	height: 50px;
 	text-align: center;
-	border-radius: 4px;
+	border-radius: 50%;
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
@@ -4164,6 +4167,7 @@ input, select, textarea {
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1000;
+	color: #242943;
 }
 #button::after {
 	content: "\f077";
@@ -4172,18 +4176,27 @@ input, select, textarea {
 	font-style: normal;
 	font-size: 1em;
 	line-height: 50px;
-	color: #fff;
 }
 #button:hover {
 	cursor: pointer;
-	background-color: #333;
+	background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff!important;
+  transform: translateY(-7px);
 }
 #button:active {
-	background-color: #555;
+	background-color: #242943;
 }
 #button.show {
 	opacity: 1;
 	visibility: visible;
+  transition: all 0.3s ease 0s;
+}
+#button::after :hover {
+	color: #fff;
+}
+#button span {
+	display: none;
 }
 
 /* Styles for the content section */
@@ -4212,6 +4225,29 @@ input, select, textarea {
 .content h3 {
 	font-style: italic;
 	color: #96a2a7;
+}
+
+/* Contact  */
+#contact header.major {
+	width: auto;
+}
+#contact .inner button {
+	margin: 30px 0 15px;
+}
+#contact .inner a {
+	border-bottom: none;
+}
+#contact > .inner > .split > * {
+	padding: 1.5em 0 .5em 3em;
+}
+.contact-method {
+	margin: 0 0 1em 0;
+}
+#footer .inner {
+	padding: .5em 0;
+}
+#footer .inner ul {
+	margin: 0;
 }
 /* Mobile view */
 
@@ -4274,9 +4310,40 @@ input, select, textarea {
 	#caption1, #caption2 {
     height: 240px;
 	}
+	ul.icons {
+		columns: 1;
+		bottom: -50px;
+		margin-bottom: 0;
+	}
+	ul.icons li {
+		margin: 0;
+	}
+	#contact > .inner > .split > * {
+    padding: 1em 0 0em 0em;
+	}
+	#contact > .inner > :nth-child(2n) {
+    margin-top: 20px;
+	}
+	#menu {
+		top: -15px;
+	}
+	#menu ul.links > li {
+    margin: 0 auto;
+	}
+	#menu .inner > :first-child {
+    margin-top: -5em;
+	}
+	body.is-menu-visible #menu .inner {
+		overflow: visible;
+	}
+	#menu .inner > :last-child {
+    columns: 1;
+	}
+	#button {
+    bottom: 60px;
+	}
+
 }
-
-
 
 
 
